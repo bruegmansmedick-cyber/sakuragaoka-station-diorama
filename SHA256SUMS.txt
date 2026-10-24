@@ -1,0 +1,2 @@
+5ffc2b60b011adf58b58e3968dadffc91f2cccf10344df8f9f92bcf0e04a4be2  Sakuragaoka-Station-Portable-1.0.0-x64.exe
+796ef677e9307003de0e5fafc0e1627e71ccae9140d87ef0bde5dc2edbb6ff8d2  Sakuragaoka-Station-1.0.0-x64.exe

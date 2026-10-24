@@ -1,0 +1,96 @@
+{
+  "name": "sakuragaoka-station-diorama",
+  "version": "1.0.0",
+  "private": true,
+  "description": "桜ヶ丘駅：可切换天气与时段、可封装的日式樱花车站 3D 微缩景观",
+  "main": "main.js",
+  "author": "Google Gemini, DeepSeek and project contributors",
+  "license": "MIT",
+  "homepage": "https://bruegmansmedick-cyber.github.io/sakuragaoka-station-diorama/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bruegmansmedick-cyber/sakuragaoka-station-diorama.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bruegmansmedick-cyber/sakuragaoka-station-diorama/issues"
+  },
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "build:win": "electron-builder --win --x64",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux AppImage"
+  },
+  "keywords": [
+    "threejs",
+    "webgl",
+    "diorama",
+    "sakura",
+    "anime",
+    "cel-shading",
+    "weather",
+    "day-night",
+    "desktop-widget",
+    "electron",
+    "codex-pet"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "devDependencies": {
+    "electron": "^45.0.0",
+    "electron-builder": "^26.18.0"
+  },
+  "build": {
+    "appId": "com.sakuragaoka.diorama.widget",
+    "productName": "Sakuragaoka Station Diorama",
+    "asar": true,
+    "directories": {
+      "output": "dist",
+      "buildResources": "assets"
+    },
+    "files": [
+      "index.html",
+      "main.js",
+      "preload.js",
+      "package.json",
+      "vendor/**/*",
+      "assets/**/*"
+    ],
+    "win": {
+      "icon": "assets/icon.png",
+      "target": [
+        "portable",
+        "nsis"
+      ],
+      "artifactName": "Sakuragaoka-Station-${version}-${arch}.${ext}"
+    },
+    "portable": {
+      "artifactName": "Sakuragaoka-Station-Portable-${version}-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "桜ヶ丘駅 3D 桌景"
+    },
+    "mac": {
+      "icon": "assets/icon.png",
+      "category": "public.app-category.entertainment",
+      "target": [
+        "dmg"
+      ],
+      "artifactName": "Sakuragaoka-Station-${version}-${arch}.${ext}"
+    },
+    "linux": {
+      "icon": "assets/icon.png",
+      "category": "Graphics",
+      "target": [
+        "AppImage"
+      ],
+      "artifactName": "Sakuragaoka-Station-${version}-${arch}.${ext}"
+    }
+  }
+}
