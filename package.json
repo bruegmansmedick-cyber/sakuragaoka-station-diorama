@@ -1,6 +1,6 @@
 {
   "name": "sakuragaoka-station-diorama",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "description": "桜ヶ丘駅：可切换天气与时段、可封装的日式樱花车站 3D 微缩景观",
   "main": "main.js",
